@@ -3,5 +3,5 @@ output "rds_host" {
 }
 
 output "rds_instance" {
-  value = aws_db_instance.metadata_db
+  value = aws_db_instance.metadata_db.id
 }
