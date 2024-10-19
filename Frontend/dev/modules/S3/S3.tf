@@ -7,6 +7,14 @@ resource "aws_s3_bucket" "frontend_bucket" {
   }
 }
 
+resource "aws_s3_bucket_website_configuration" "frontend_bucket_website" {
+  bucket = aws_s3_bucket.frontend_bucket.bucket
+
+  index_document {
+    suffix = "index.html"
+  }
+}
+
 resource "aws_s3_bucket_public_access_block" "frontend_bucket_public_access_block" {
   bucket = aws_s3_bucket.frontend_bucket.id
   block_public_acls   = false
