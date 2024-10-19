@@ -1,4 +1,4 @@
-name: "Deploy to Airflow DEV"
+name: "Provision Dev Infrastructure for Airflow"
 
 on: workflow_dispatch
 
