@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "frontend_bucket" {
-  bucket = "Discern-UI-${var.environment}"
+  bucket = "discern-uii-${var.environment}"
 
   tags = {
     Name        = "Discern-UI S3 Bucket"
