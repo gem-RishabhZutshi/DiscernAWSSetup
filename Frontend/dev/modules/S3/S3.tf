@@ -31,7 +31,7 @@ resource "aws_s3_bucket_policy" "frontend_bucket_policy" {
       {
         Action   = ["s3:GetObject"]
         Effect   = "Allow"
-        Resource = "${aws_s3_bucket.frontend_bucket.arn}/${var.environment}/*"
+        Resource = "${aws_s3_bucket.frontend_bucket.arn}/*"
         Principal = "*"
       }
     ]
